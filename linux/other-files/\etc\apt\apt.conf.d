@@ -1,0 +1,13 @@
+00aptitude
+00mint
+01autoremove
+20dbus
+50appstream
+70debconf
+99synaptic
+00cdrom
+00trustcdrom
+01-vendor-ubuntu
+20packagekit
+50command-not-found
+90mintsystem
