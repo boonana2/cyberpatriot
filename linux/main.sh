@@ -9,7 +9,7 @@ replace /etc/sysctl.conf with /linux/files/secure/\etc\sysctl.conf
 
 // firewall part
 sudo ufw enable
-sudo ufw default de
+sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw logging high
 
