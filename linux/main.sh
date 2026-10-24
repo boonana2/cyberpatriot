@@ -1,4 +1,11 @@
 // replace files with the ones in secured
+replace /etc/default/grub with /linux/files/secure/\etc\default\grub
+replace /etc/login.defs with /linux/files/secure/\etc\login.defs
+replace /etc/pam.d/common-auth with /linux/files/secure/\etc\pam.d\common-auth
+replace /etc/pam.d/common-password with /linux/files/secure/\etc\pam.d\common-password
+replace /etc/security/pwquality.conf with /linux/files/secure/\etc\security\pwquality.conf
+replace /etc/sudo.conf with /linux/files/secure/\etc\sudo.conf
+replace /etc/sysctl.conf with /linux/files/secure/\etc\sysctl.conf
 
 // firewall part
 sudo ufw enable
