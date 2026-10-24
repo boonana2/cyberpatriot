@@ -63,6 +63,7 @@ Key Files
 
 ## Services
 Commands:
+- List All Services: ```service --status-all```
 - Enable Service: ```sudo systemctl enable [service]```
 - Disable Service: ```sudo systemctl disable [service]```
 - Start Service: ```sudo systemctl start [service]```
@@ -210,7 +211,7 @@ If a file is protected, try the following:
 - Changing Permissions: ```sudo chmod [permission] [file]```
 - Changing Attributes: ```sudo chattr [options] [file]```
 
-```chattr``` Example: ```sudo chattr -ia *.mp3```
+```chattr``` Example: ```sudo chattr -i /etc/passwd```
 
 ## Scheduled Tasks
 Commands
