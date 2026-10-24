@@ -30,8 +30,53 @@ Group Password Structure: ```groupname:password_hash:administrators:members```
 Commands:
 - Change Password: ```sudo passwd [username]```
 - Disable Password Logins (!): ```sudo passwd -l [username]```
+- Check for Empty Passwords: ```sudo awk -F: '($2 == "") {print}' /etc/shadow```
 
 Vulnerabilites:
 - All regular users must have a password hash.
 - All system users should have ```*``` as their password hash.
 - The root account should have a ```!``` as its password hash.
+
+## Sudoers
+Key Files
+- Sudoers File: ```/etc/sudoers```
+- Edit Sudoers File: ```sudo visudo```
+- Sudoers Directory: ```/etc/sudoers.d```
+- Sudoers Configuration: ```/etc/sudo.conf```
+
+## Policies
+### PAM
+Key Files
+- Common Password: ```/etc/pam.d/common-password```
+- Password Quality: ```/etc/security/pwquality.conf```
+- Common Authorization: ```/etc/pam.d/common-auth```
+
+PAM Modules
+- Check Tampering: ```debsums -s libpam-modules```
+- If there's an output, it has been tampered with.
+- Remediation: ```sudo apt install --reinstall libpam-modules```
+### Other
+Key Files
+- Login Definitions: ```/etc/login.defs```
+- Boot Parameters: ```/etc/default/grub```
+
+## Services
+Commands:
+- Enable Service: ```sudo systemctl enable [service]```
+- Disable Service: ```sudo systemctl disable [service]```
+- Start Service: ```sudo systemctl start [service]```
+- Stop Service: ```sudo systemctl stop [service]```
+- Check Service Status: ```systemctl status [service]```
+
+## Applications
+Commands:
+- Install Package: ```sudo apt install [package]```
+- Remove Package: ```sudo apt purge [package]```
+- Remove Unused Dependencies: ```sudo apt autoremove --purge```
+- Clear Old Cache: ```sudo apt autoclean```
+- Show Held Packages: ```apt-mark showhold```
+- Unhold Packages: ```sudo apt-mark unhold [package]```
+- Unhold All: ```sudo apt-mark unhold$(apt-mark showhold)```
+
+## Updates
+Common
