@@ -59,6 +59,7 @@ PAM Modules
 Key Files
 - Login Definitions: ```/etc/login.defs```
 - Boot Parameters: ```/etc/default/grub```
+- System Control: ```/etc/sysctl.conf```
 
 ## Services
 Commands:
@@ -152,3 +153,62 @@ Required Capabilities
 
 ### Extended File Attributes and ACLs
 i do later
+
+## Firewall
+Commands:
+- Firewall Status: ```sudo ufw status verbose```
+- Enable Firewall: ```sudo ufw enable```
+- Deny Incoming: ```sudo ufw default deny incoming```
+- Allow Outgoing: ```sudo ufw default allow outgoing```
+- Enable Logging: ```sudo ufw logging high```
+- Allow Port: ```sudo ufw allow [port]```
+- Deny Port: ```sudo ufw deny [port]```
+
+## Auditing
+Comamands:
+- Install: ```sudo apt install auditd```
+- Check Status: ```systemctl status auditd```
+- Enable: ```sudo systemctl enable rsyslog```
+- Enable: ```sudo systemctl enable systemd-journald```
+
+## Prohibited Files
+Structure: ```find [path] [options] [action]```
+
+Example: ```sudo find / -name "*.mp3"```
+
+### Media
+Audios & Videos
+- .mp3 | .mp4 | .mov | .ogg | .mkv | .avi | .wav | .flac | .webm | .jpg | .jpeg | .png | .gif
+
+Scripts
+- .py | .sh | .pl | .rb | .php | .bin | .run | .AppImage | .elf | .ps1 | .bat
+
+Archives
+- .zip | .gz | .tar | .7z | .rar | .bz2 | .xz | .tar.gz | .tgz | .iso
+
+Install
+- .deb | .rpm | .snap | .flatpak | .flatpakref
+
+Other
+- .txt
+
+### Malicious Malware
+Places to Look:
+- /etc/init.d
+- /etc/rc* (rc.local, rc0.d, rc1.d, etc)
+- /etc/bash.bashrc
+- .bashrc file
+
+### Protected Files
+If a file is protected, try the following:
+- Taking Ownership: ```sudo chown [user]:[user] [file]```
+- Changing Permissions: ```sudo chmod [permission] [file]```
+- Changing Attributes: ```sudo chattr [options] [file]```
+
+```chattr``` Example: ```sudo chattr -ia *.mp3```
+
+## Scheduled Tasks
+Commands
+- System-Wide Jobs: ```/etc/crontab```
+- Periodical Jobs: ```/etc/crontab.*```
+- User Jobs: ```/var/spool/cron/crontabs```
