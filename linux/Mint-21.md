@@ -96,3 +96,53 @@ update these and secure em
 ### Permissions | ```chmod```
 Structure: ```chmod [permission] [file]```
 
+This command changes the executing, reading, and writing permissions for a file.
+
+Example: ```chmod 644 /etc/passwd```
+
+### Ownership | ```chown```
+Structure: ```chown [username]:[groupname] [file]```
+
+This command changes the user and group ownership of a file.
+
+Example: ```chown root:root /etc/passwd```
+
+### Default Permissions | ```umask```
+Structure: ```umask [permission]```
+
+This command changes the default permissions for newly created files and directories.
+
+Example: ```umask 027```
+
+To implement this, ```umask 027``` must be added to the bottom of ```/etc/profile``` and ```/etc/bash.brc```.
+
+### SUID / GUID
+Allows files to run with the permissions of the file's owner or group.
+
+Commands:
+- Find SUID: ```find / -perm /4000 2>/dev/null```
+- Find SGID: ```find / -perm /2000 2>/dev/null```
+- Delete SUID: ```sudo chmod u-s [file]```
+- Delete SGID: ```sudo chmod g-s [file]```
+
+### File Capabilities
+Structure: ```setcap [capability]+eip [file]```
+
+Commands:
+- Set Capability: ```setcap [capability]+eip [file]```
+- Remove All Capabilities: ```sudo setcap -r [file]```
+- View Capabilities: ```getcap [file]```
+
+Capabilities:
+- cap_setuid | ability to change what user you are running as
+- cap_setgid | ability to change what group you are running as
+- cap_sys_admin | admin permissions
+- cap_dac_override | bypass permissions
+- cap_dac_read_search | bypass permissions
+- cap_chown | ability to change ownership
+- cap_fowner | ability to change ownership
+- cap_kill | ability to kill any program
+- cap_sys_ptrace | ability to debug and tamper with any program
+
+### Extended File Attributes and ACLs
+i do later
