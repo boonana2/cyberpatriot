@@ -79,4 +79,20 @@ Commands:
 - Unhold All: ```sudo apt-mark unhold$(apt-mark showhold)```
 
 ## Updates
-Common
+Commands:
+- apt Directory: ```/etc/apt/apt.conf.d```
+- Update: ```sudo apt update && sudo apt upgrade && sudo apt dist-upgrade -y```
+
+Vulnerabilities:
+- Enable Automatic Updates in GUI.
+
+Additional Info:
+- Compare the apt directory with the baseline.
+
+## Web Browsers
+update these and secure em
+
+## Permissions
+### Permissions | ```chmod```
+Structure: ```chmod [permission] [file]```
+
