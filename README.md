@@ -5,6 +5,7 @@
 - CIS Benchmarks: https://downloads.cisecurity.org/#/
 ### Tools
 - APERISOLVE: https://www.aperisolve.com/
+- CyberChef: https://cyberchef.io/
 ### Scripts
 - Run:
 ```
