@@ -1,6 +1,4 @@
-// replace essential files part
-all files in secure
-sudo sysctl -p
+// replace files with the ones in secured
 
 // firewall part
 sudo ufw enable
@@ -11,11 +9,14 @@ sudo ufw logging high
 // unhold everything
 sudo apt-mark unhold $(apt-mark showhold)
 
-
+// auditing
+sudo apt install auditd
+sudo systemctl enable rsyslog
+systemctl enable systemd-journald
 
 // apply changes part
 sudo update-grub
-
+sudo sysctl -p
 
 // pam modules
 if debsums -s libpam-modules = output {
