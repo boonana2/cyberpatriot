@@ -144,5 +144,11 @@ Capabilities:
 - cap_kill | ability to kill any program
 - cap_sys_ptrace | ability to debug and tamper with any program
 
+Required Capabilities
+- gnome-keyring-daemon = cap_ipc_lock+ep
+- mtr-packet = cap_net_raw+ep
+- ping = cap_net_raw+ep
+- traceroute6.iputils = cap_net_raw+ep
+
 ### Extended File Attributes and ACLs
 i do later
