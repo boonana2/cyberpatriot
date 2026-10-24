@@ -13,7 +13,6 @@ User Commands:
 - Delete Account: ```sudo deluser [username]```
 - Enable Account: ```sudo usermod -L [username]```
 - Disable Account: ```sudo usermod -U [username]```
-- Change Password: ```sudo passwd [username]```
 
 Group Commands:
 - Create Group: ```sudo groupadd [groupname]```
@@ -27,6 +26,10 @@ Group Commands:
 User Password Structure: ```username:password_hash:last_changed:min_age:max_age:warn_period:inactive:expire_date:reserved```
 
 Group Password Structure: ```groupname:password_hash:administrators:members```
+
+Commands:
+- Change Password: ```sudo passwd [username]```
+- Disable Password Logins (!): ```sudo passwd -l [username]```
 
 Vulnerabilites:
 - All regular users must have a password hash.
