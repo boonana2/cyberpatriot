@@ -1,5 +1,10 @@
 # Mint 21
 
+## Forensics
+Display Directory's Contents: ```tree```
+
+Detailed: ```tree -a```
+
 ## User Auditing
 
 ### Users & Groups | ```/etc/passwd``` & ```/etc/groups```
