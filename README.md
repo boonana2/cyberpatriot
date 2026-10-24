@@ -6,4 +6,7 @@
 ### Tools
 - APERISOLVE: https://www.aperisolve.com/
 ### Scripts
-- Run: ``` git clone https://github.com/boonana2/cyberpatriot.git && cd cyberpatriot/linux && sudo bash main.sh ```
+- Run:
+```
+git clone https://github.com/boonana2/cyberpatriot.git && cd cyberpatriot/linux && sudo bash main.sh
+```
