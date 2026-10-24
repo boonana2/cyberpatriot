@@ -281,9 +281,7 @@ USERGROUPS_ENAB no
 # Note: It is recommended to use a value consistent with
 # the PAM modules configuration.
 #
-ENCRYPT_METHOD YESCRYPT
-
-YESCRYPT_COST_FACTOR 7
+ENCRYPT_METHOD SHA512
 
 #
 # Only used if ENCRYPT_METHOD is set to SHA256 or SHA512.
