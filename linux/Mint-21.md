@@ -178,6 +178,7 @@ Example: ```sudo find / -name ".*.mp3"```
 
 The ```.``` before the ```*``` in ```sudo find / -name ".*.mp3"``` is to ensure that it also searches for hidden files.
 Hidden files have a ```.``` in their names.
+
 Example: ```.hiddenfile.txt```
 
 ### Media
