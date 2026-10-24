@@ -5,7 +5,7 @@
 - CyberChef: https://cyberchef.io/
 - CHMOD Calculator: https://chmod-calculator.com/
 ### Scripts
-- Run: 
+- Main Script: 
 ```
 git clone https://github.com/boonana2/cyberpatriot.git && cd cyberpatriot/linux && sudo bash main.sh
 ```
