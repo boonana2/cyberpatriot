@@ -19,6 +19,9 @@ run() {
   "$@" >/dev/null 2>&1 || FAILURES+=("FAILED: $*")
 }
 
+# -------------------- Install Module --------------------
+run apt install -y libpam-pwquality
+
 # -------------------- Replace Files with Secured Ones --------------------
 FILES=(
   /etc/default/grub
