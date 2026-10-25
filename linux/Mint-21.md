@@ -36,6 +36,7 @@ Commands:
 - Change Password: ```sudo passwd [username]```
 - Disable Password Logins (!): ```sudo passwd -l [username]```
 - Check for Empty Passwords: ```sudo awk -F: '($2 == "") {print}' /etc/shadow```
+- Change Password at Next Login: ```sudo passwd -e [username]```
 
 Vulnerabilites:
 - All regular users must have a password hash.
