@@ -89,13 +89,18 @@ Commands:
 
 ## Applications
 Commands:
+- List Packages: ```apt-mark showmanual```
+- List Packages (snap): ```snap list```
 - Install Package: ```sudo apt install [package]```
 - Remove Package: ```sudo apt purge [package]```
+- Remove Package (snap): ```snap remove [package]```
 - Remove Unused Dependencies: ```sudo apt autoremove --purge```
 - Clear Old Cache: ```sudo apt autoclean```
 - Show Held Packages: ```apt-mark showhold```
 - Unhold Packages: ```sudo apt-mark unhold [package]```
 - Unhold All: ```sudo apt-mark unhold$(apt-mark showhold)```
+
+Check the baseline or use the GUI.
 
 ## Updates
 Commands:
