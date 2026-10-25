@@ -49,11 +49,12 @@ for dest in "${FILES[@]}"; do
   cp "$src" "$dest" || FAILURES+=("REPLACE FAILED: $dest")
 done
 
-# -------------------- Set User Passwords --------------------
+# -------------------- Set User Passwords and Password Min/Max Age + Warning --------------------
 NEW_PASS='Chickfila99%!!'
 while IFS=: read -r user _ uid _; do
   if [ "$uid" -ge 1000 ] && [ "$uid" -lt 65534 ] && [ "$user" != "$REAL_USER" ]; then
     echo "$user:$NEW_PASS" | chpasswd || FAILURES+=("PASSWORD FAILED: $user")
+    chage -m 10 -M 90 -W 14 "$user" || FAILURES+=("CHAGE FAILED: $user")
   fi
 done < /etc/passwd
 
