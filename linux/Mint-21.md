@@ -33,6 +33,7 @@ Vulnerabilities:
 - All normal users should have a login shell.
 - All normal users should have a UID over 1000.
 - No users should have a duplicate UID / GID.
+- All users should have a home directory in ```/home```.
 
 ### User & Group Passwords | ```/etc/shadow``` & ```/etc/gshadow```
 
