@@ -117,6 +117,11 @@ This command changes the executing, reading, and writing permissions for a file.
 
 Example: ```chmod 644 /etc/passwd```
 
+There shouldn't be any world-writable files on the system.
+Find World-Writable Files: ```find / -perm -o+w -not -path "/proc/*" -not -path "/sys/*" 2>/dev/null```
+
+Fix World-Writable Files: ```sudo chmod o-w [file]```
+
 ### Ownership | ```chown```
 Structure: ```chown [username]:[groupname] [file]```
 
