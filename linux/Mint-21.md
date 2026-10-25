@@ -196,6 +196,10 @@ Ports:
 - 1024 - 49151 = Applications
 - 49152 - 65535 = Temporary Connections (dyanimic/ephemeral)
 
+Other:
+- Firewall Logs: ```/var/log/ufw.log```
+- 
+
 Important Ports:
 - SSH: 22
 - HTTP: 80
