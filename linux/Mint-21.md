@@ -3,7 +3,9 @@
 ## Forensics
 Display Directory's Contents: ```tree```
 
-Detailed: ```tree -a```
+Display Directory's Contents Detailed: ```tree -a```
+
+
 
 ## User Auditing
 
@@ -118,7 +120,9 @@ This command changes the executing, reading, and writing permissions for a file.
 Example: ```chmod 644 /etc/passwd```
 
 There shouldn't be any world-writable files on the system.
-Find World-Writable Files: ```find / -perm -o+w -not -path "/proc/*" -not -path "/sys/*" 2>/dev/null```
+Find World-Writable Files in Certain Directories: ```find /bin /sbin /usr/bin /usr/sbin /etc -type f -perm -o+w 2>/dev/null```
+
+Most of the time, the command above should return nothing.
 
 Fix World-Writable Files: ```sudo chmod o-w [file]```
 
