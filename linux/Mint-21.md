@@ -142,6 +142,8 @@ Commands:
 - Delete SUID: ```sudo chmod u-s [file]```
 - Delete SGID: ```sudo chmod g-s [file]```
 
+Compare these with the baseline.
+
 ### File Capabilities
 Structure: ```setcap [capability]+eip [file]```
 
