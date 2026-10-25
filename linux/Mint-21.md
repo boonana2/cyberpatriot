@@ -191,6 +191,22 @@ Commands:
 - Allow Port: ```sudo ufw allow [port]```
 - Deny Port: ```sudo ufw deny [port]```
 
+Ports:
+- <1024 = System Services
+- 1024 - 49151 = Applications
+- 49152 - 65535 = Temporary Connections (dyanimic/ephemeral)
+
+Important Ports:
+- SSH: 22
+- HTTP: 80
+- HTTPS: 443
+- FTP: 21
+- SMTP: 25
+- DNS: 53
+- MySQL - 3306
+- RDP - 3389
+- HTTP - 8080
+
 ## Auditing
 Comamands:
 - Install: ```sudo apt install auditd```
