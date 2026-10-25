@@ -25,6 +25,14 @@ Group Commands:
 - Add User to Group: ```sudo usermod -aG [groupname] [username]```
 - Remove User from Group: ```sudo gpasswd -d [username] [groupname]```
 - Change Group Password: ```sudo gpasswd [groupname]```
+- Print Group Members: ```getent group [groupname]```
+
+Vulnerabilities:
+- The root account should be the only account with a UID and GID of 0.
+- All service users should not have a login shell.
+- All normal users should have a login shell.
+- All normal users should have a UID over 1000.
+- No users should have a duplicate UID / GID.
 
 ### User & Group Passwords | ```/etc/shadow``` & ```/etc/gshadow```
 
