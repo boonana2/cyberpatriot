@@ -91,6 +91,7 @@ Commands:
 Commands:
 - List Packages: ```apt-mark showmanual```
 - List Packages (snap): ```snap list```
+- List Packages Detailed: ```dpkg -l```
 - Install Package: ```sudo apt install [package]```
 - Remove Package: ```sudo apt purge [package]```
 - Remove Package (snap): ```snap remove [package]```
