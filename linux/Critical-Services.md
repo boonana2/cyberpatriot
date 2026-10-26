@@ -2,10 +2,13 @@
 ## SSH
 ### Client | ```/etc/ssh/ssh_config```
 Settings
-- PasswordAuthentication no
-- PublicKeyAuthentication yes
-- AllowUsers [user1], [user2]
 - ForwardAgent no
+- ForwardX11 no
+- PasswordAuthentication no
+- PubkeyAuthentication yes
+  - This setting isn't in the file by default.
+- StrictHostKeyChecking ask
+- HashKnownHosts yes
 
 ### Server | ```/etc/ssh/sshd_config```
 Settings
@@ -27,5 +30,7 @@ Settings
 - PermitUserEnvironment no
 - ClientAliveInterval 300
 - ClientAliveCountMax 2
-- AllowUsers [username] [username]
+- AllowUsers [username], [username]
   - This setting isn't in the file by default.
+
+## 
