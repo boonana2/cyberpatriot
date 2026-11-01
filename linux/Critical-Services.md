@@ -74,7 +74,7 @@ Default:
 - daemon
 - bin
 - sys
-- sync
+- sync 
 - games
 - man
 - lp
@@ -84,3 +84,17 @@ Default:
 - nobody
 
 Ensure that the root user is in this file.
+
+## SMB | ```/etc/samba/smb.conf```
+Settings | ```[global]```
+- server min protocol = SMB2_10
+- client min protocol = SMB2_10
+- smb encrypt = required
+- server smb encrypt = required
+- map to guest = Never
+- usershare allow guests = no
+- restrict anonymous = 2
+- lanman auth = no
+- ntlm auth = ntlmv2-only
+- disable spoolss = yes
+- load printers = no
