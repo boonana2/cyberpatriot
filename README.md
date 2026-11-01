@@ -1,5 +1,5 @@
 # **README**
-## Linux Links
+## Linux
 ### Tools
 - APERISOLVE: https://www.aperisolve.com/
 - CyberChef: https://cyberchef.io/
