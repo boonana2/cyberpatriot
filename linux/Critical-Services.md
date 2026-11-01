@@ -94,7 +94,9 @@ Settings | ```[global]```
 - map to guest = Never
 - usershare allow guests = no
 - restrict anonymous = 2
-- lanman auth = no
 - ntlm auth = ntlmv2-only
 - disable spoolss = yes
 - load printers = no
+
+Commands
+- Print Configurations/Errors: ```testparm```
