@@ -110,6 +110,7 @@ Commands:
 
 Vulnerabilities:
 - Enable Automatic Updates in GUI.
+- Update Critical Services and Applications!
 
 Additional Info:
 - Compare the apt directory with the baseline.
