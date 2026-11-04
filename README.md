@@ -3,6 +3,7 @@
 ### Tools
 - APERISOLVE: https://www.aperisolve.com/
 - CyberChef: https://cyberchef.io/
+- Cipher Identifier: https://www.dcode.fr/cipher-identifier
 - CHMOD Calculator: https://chmod-calculator.com/
 ### Scripts
 - Main Script: 
